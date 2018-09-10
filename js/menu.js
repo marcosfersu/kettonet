@@ -64,20 +64,28 @@ $(document).ready(function(){
              $("#fp-nav").addClass("none"); 
                 $("#contacto").addClass("none");              
     });
+ $("#icon-mail").hover(function(){
+        var hovericon = 1;
 
-/*    $("#icon-mail").hover(function(){
+        if(hovericon = 1){
+            $("#icon-mail").attr('src','img/icon-mail-hover.svg');
+        }
+
+    });  
+
+
+ /*
+    $("#icon-mail").hover(function(){
          var src = ($(this).attr('src') === 'img/icon-mail.svg')
             ? 'img/icon-mail-hover.svg'
             : 'img/icon-mail.svg';
          $(this).attr('src', src);
-    });*/
+    });
 
-    $("#icon-mail").hover(function(){
-        $("#icon-mail").attr('src','img/icon-mail-hover.svg');
-    });    
+   
 
     $("#icon-mail").click(function(){
         $("#icon-mail").attr('src','img/icon-mail-hover.svg');
     });
-
+*/
 });    
