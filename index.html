@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Web - KETTONET</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8"/>
 	<meta name="author" content="Marcos Fernández (developer) and Agustina Todea (desing)" />
 	<meta name="description" content="Web for Kettonet" />
 	<meta name="keywords"  content="kettonet, ropa, etc" />
@@ -11,131 +11,188 @@
 
 
 	<link rel="stylesheet" type="text/css" href="js/fullPage.js-master/src/fullpage.css" />	
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/frameworks/jquery.fullPage.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">	
+
+	
+
 
 </head>
 <body>
-
-	<div id="menu" class="menu">
+	<div id="menu" class="menu left">
 		<div class="wrap">
-			<ul>
-				<li data-menuanchor="1rdPage" id="boton-1"><a href="#1rdPage"><img class="	logo" src="img/logo.png"></a></li>		
-				<li data-menuanchor="2rdPage"><a href="#2rdPage">desarrollos</a></li>
-				<li data-menuanchor="3rdPage"><a href="#3rdPage">calidad</a></li>
-				<li data-menuanchor="4rdPage"><a href="#4rdPage">equipo</a></li>
-				<li data-menuanchor="5rdPage"><a href="#5rdPage">experiencia</a></li>
-				<li data-menuanchor="6rdPage"><a href="#6rdPage">productos</a></li>
+			<ul class="menu-ul">
+				<li data-menuanchor="inicio" id="boton-1"><a href="#inicio"><img class="logo" src="img/logo.png"></a></li>
+				<li><button class="croz"><p>x</p></button></li>		
+				<li data-menuanchor="inicio"><a href="#inicio" class="home">home</a></li>					
+				<li data-menuanchor="desarrollos"><a href="#desarrollos">desarrollos</a></li>
+				<li data-menuanchor="calidad"><a href="#calidad">calidad</a></li>
+				<li data-menuanchor="equipo"><a href="#equipo">equipo</a></li>
+				<li data-menuanchor="experiencia"><a href="#experiencia">experiencia</a></li>
+				<li data-menuanchor="producto"><a href="#producto">productos</a></li>
+				<li data-menuanchor="contacto"><a href="#contacto" class="contacto">contacto</a></li>
+
 			</ul>
-			<p>segui adelante</p>
 		</div>		
 	</div>
 	<div id="contacto">
 		<div class="wrap">
-			<a href="#7rdPage"><img class="icon-mail" id="icon-mail" src="img/icon-mail.svg"></a>
+			<a href="#contacto" class="content-icon-mail"><div class="icon-mail" ><img id="icon-mail" src="img/icon-mail-hover-2.svg"></div></a>
 		</div>
-	</div>	
+	</div>
+	<div id="logo-mobile">
+			<img class="menu logo axe" src="img/logo.png">	
+	</div>			
+
 	<div id="fullpage">
 		<div class="section" id="section0">
 			<section class="content-intro">
 				<img class="intro-logo" src="img/logo.png">
 				<h3>bienvenido a un mundo de soluciones </br>pensadas especialmente para la industria textil</h3>
-				<a alt="button" href="#2rdPage">entrar</a>
+				<a alt="button" href="#desarrollos">ENTRAR</a>
 
 			</section>
 		</div>		
 		<div class="section">
 			<section class="content-section">
-				<h5 class="flotando">desarrollos</h5>
-				<article class="content-info">
-					<h4 class="frase">La remera más simple y el abrigo más complejo.</h4>
-					<h2  class="numero">1.</h2>
+				<h5 class="flotando" id="uno">desarrollos</h5>
+				<article class="content-info">			
+					<div class="content-top">
+						<h4 class="frase">La remera más simple y el abrigo más complejo.</h4>
+						<h2  class="numero">1.</h2>
+					</div>
 					<hr class="line">
 					<div class="texto-info">
 						<h3>desarollos</h3>
-						<p>Nos diferenciamos por ser flexibles y funcionales a la necesidad del cliente, nos adaptamos con facilidad a distintos escenarios con la libertad de desarrollar tanto prendas básicas como con alto nivel de diseño y valor agregado.</p>
+						<h4 class="frase-mobile frase">La remera más simple y el abrigo más complejo.</h4>
+						<p>Nos diferenciamos por ser flexibles y funcionales a la necesidad del cliente, nos adaptamos con facilidad a distintos escenarios con la libertad de desarrollar tanto prendas básicas como con alto nivel de diseño y valor agregado.</br><span class="strong"> Podemos hacerlo</span></p>
 					</div>
 				</article>
-				<img class="img-section" src="img/kettonet-original-01.jpg">
+				<div class="crop-img">
+					<img class="img-section" src="img/kettonet-original-01.jpg">
+				</div>	
 			</section>
 		</div>
 		<div class="section">
 			<section class="content-section reverse">
+				<h5 class="flotando" id="dos">calidad</h5>				
 				<article class="content-info">
-					<h4 class="frase">Fabricamos en nuestra planta de Argentina o importamos de Oriente.</h4>
-					<h2  class="numero">2.</h2>
+					<div class="content-top reverse">					
+						<h4 id="frase-2" class="frase">Fabricamos en nuestra planta de Argentina o importamos de Oriente.</h4>
+						<h2  class="numero">2.</h2>
+					</div>
 					<hr class="line">
 					<div class="texto-info">
 						<h3>calidad</h3>
+						<h4 class="frase-mobile frase">Fabricamos en nuestra planta de Argentina o importamos de Oriente.</h4>
 						<p>Estar presentes con oficinas en Shangai y estructura en Buenos Aires nos permite lograr un producto terminado de calidad internacional.</br>
 
-						Contamos con tejeduría y tintorería propias por lo que somos independientes en la totalidad de los procesos de producción, garantizando flexibilidad y dinamismo. </p>
+						Contamos con tejeduría y tintorería propias por lo que somos independientes en la totalidad de los procesos de producción, garantizando flexibilidad y dinamismo.<span class="strong"> Podemos hacerlo</span></p>
 					</div>
 				</article>
-				<img class="img-section" src="img/kettonet-original-02.jpg">
+				<div class="crop-img">				
+					<img class="img-section" src="img/kettonet-original-02.jpg">
+				</div>
 			</section>			
 		</div>
 		<div class="section">
 			<section class="content-section">
+				<h5 class="flotando" id="tres">equipo</h5>				
 				<article class="content-info">
-					<h4 class="frase">Realizamos tu diseño o te proponemos ideas.</h4>
-					<h2  class="numero">3.</h2>
+					<div class="content-top">					
+						<h4 class="frase">Realizamos tu diseño o te proponemos ideas.</h4>
+						<h2  class="numero">3.</h2>
+					</div>
 					<hr class="line">
 					<div class="texto-info">
 						<h3>equipo</h3>
-						<p>Un joven equipo de profesionales con la dirección de expertos de larga trayectoria en la industria nos permite interpretar fielmente las propuestas de las marcas, como así también proponer creatividad para lograr mejores costos y tiempos de realización.</p>
+						<h4 class="frase-mobile frase">Realizamos tu diseño o te proponemos ideas.</h4>	
+						<p>Un joven equipo de profesionales con la dirección de expertos de larga trayectoria en la industria nos permite interpretar fielmente las propuestas de las marcas, como así también proponer creatividad para lograr mejores costos y tiempos de realización.<span class="strong"> Podemos hacerlo</span></p>
 					</div>
 				</article>
-				<img class="img-section" src="img/kettonet-original-03.jpg">
+				<div class="crop-img">				
+					<img class="img-section" src="img/kettonet-original-03.jpg">
+				</div>
 			</section>
 		</div>
 		<div class="section">
 			<section class="content-section reverse">
+				<h5 class="flotando" id="cuatro">experiencia</h5>				
 				<article class="content-info">
-					<h4 class="frase">Fabricamos la tela o te entregamos el producto terminado.</h4>
-					<h2  class="numero">4.</h2>
+					<div class="content-top reverse">					
+						<h4 class="frase">Fabricamos la tela o te entregamos el producto terminado.</h4>
+						<h2  class="numero">4.</h2>
+					</div>
 					<hr class="line">
 					<div class="texto-info">
 						<h3>experiencia</h3>
-						<p>Llevamos cuarenta años fabricando telas de tejido de punto y veinte brindando el servicio de producto terminado con altos estándares de calidad.</p>
+						<h4 class="frase-mobile frase">Fabricamos la tela o te entregamos el producto terminado.</h4>
+						<p>Llevamos cuarenta años fabricando telas de tejido de punto y veinte brindando el servicio de producto terminado con altos estándares de calidad.<span class="strong"> Podemos hacerlo</span></p>
 					</div>
 				</article>
-				<img class="img-section" src="img/kettonet-original-04.jpg">
+				<div class="crop-img">
+					<img class="img-section" src="img/kettonet-original-04.jpg">
+				</div>				
 			</section>			
 		</div>
 		<div class="section">
-			<section class="content-section">
+			<section class="content-section section-6 " id="section-6">
+				<h5 class="flotando" id="cinco">producto</h5>					
 				<article class="content-info">
-					<h2  class="numero">5.</h2>
-					<hr class="line">
+					<div class="content-top">						
+						<h2  class="numero">5.</h2>
+					</div>
+					<hr class="line full">
 					<div class="texto-info">
 						<h3>producto</h3>
-						<p>Llevamos cuarenta años fabricando telas de tejido de punto y veinte brindando el servicio de producto terminado con altos estándares de calidad.</p>
+						<div class="list-producto">						
+							<ul>
+								<li>Remeras</li>
+								<li>Buzos</li>
+								<li>Vestidos de punto</li>
+								<li>Calzas</li>
+								<li>Camisas y camisolas</li>
+							</ul>
+							<ul>	
+								<li>Sweaters</li>
+								<li>Abrigos</li>
+								<li>Camperas</li>
+								<li>Trench</li>
+								<li>Impermeables</li>							
+							</ul>
+						</div>
 					</div>
 				</article>
-				<img class="img-section" src="img/kettonet-original-01.jpg">
+				<div class="crop-img" id="img-gif">				
+					<img class="img-section"  src="img/5-productos.gif">
+				</div>	
 			</section>			
 		</div>	
 		<div class="section">
-			<section class="content-section">
+			<section class="content-section contacto-section ">
 				<article class="content-info">
-					<h2  class="numero">5.</h2>
-					<hr class="line">
 					<div class="texto-info">
 						<h3>contacto</h3>
-						<p>Llevamos cuarenta años fabricando telas de tejido de punto y veinte brindando el servicio de producto terminado con altos estándares de calidad.</p>
+						<h5>+54 11 4755 2743</h5>
 					</div>
 				</article>
-				<img class="img-section" src="img/kettonet-original-01.jpg">
+				<div class="contacto-info">
+				<input type="text" name="nombre" placeholder="nombre">
+				<input type="text" name="mail" placeholder="mail">	
+				<textarea type="text"></textarea>
+				<button>enviar</button>
+				</div>			
 			</section>			
 		</div>				
 	</div>	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/frameworks/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
 
-<script type="text/javascript" src="js/menu.js"></script>
+	<script>
 
-
+	</script>
 </body>
 </html>

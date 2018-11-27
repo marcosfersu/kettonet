@@ -24,7 +24,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	text-align: left;
 	font-family: 'Roboto', sans-serif;	
-	font-size: 16px;		
+	font-size: 16px;
+    line-height: 1.25;			
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -48,4 +49,8 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+input:focus, textarea:focus, button:focus{
+	outline: none;
 }

@@ -1,8 +1,11 @@
+
+
+
 /* MENU */
 
 #menu{
     position: fixed;    
-    top: 49px;
+    top: 20px;
     left: 0;
     height: 40px;
     z-index: 70;
@@ -44,6 +47,16 @@ body.fp-viewing-0 #fp-nav{
     color: #000;
 }
 
+#menu li:nth-child(2){
+	margin: 0;
+}
+
+@media screen and (max-width: 1222px){
+	#menu li{
+		margin: 8px 1.3em;
+	}
+}
+
 #menu li a{
 	text-decoration: none;
 	color: #000000;
@@ -55,7 +68,7 @@ body.fp-viewing-0 #fp-nav{
 }
 
 #fp-nav {
-  right: 20px;	
+    right: 70px;
 }
 
 .logo{
@@ -76,11 +89,35 @@ body.fp-viewing-0 #fp-nav{
     margin: auto;	
 }
 
-
 #contacto .icon-mail{
 	max-width: 4em;
 	height: 4em;
 	margin: 0 3em;
+	overflow: hidden;
+	position: relative;
+}
+
+#contacto .icon-mail img{
+	position: absolute;
+	top: -64px;
+	left: 0;
+}
+
+.hover-icon{
+	top: 0!important;
+}
+
+.hover-icon7{
+	top: 0!important;
+}
+
+.frase-motivacional{
+	font-size: .8em;
+	display: none;
+}
+
+.strong{
+	font-weight: 600;
 }
 
 
@@ -93,10 +130,16 @@ body.fp-viewing-0 #fp-nav{
 	flex-flow: row nowrap;
 	max-width: 1300px;
 	margin: 0 auto;
+	justify-content: center;
+    align-items: center;	
 } 
 
 .reverse{
 	flex-flow: row-reverse nowrap!important;
+}
+
+.reverse-top{
+	flex-flow: 
 }
 
 /* section IMG */
@@ -105,6 +148,12 @@ body.fp-viewing-0 #fp-nav{
 	max-width: 500px;
 	max-height: 600px;
 }
+
+#img-gif{
+	max-width: 726px;
+	max-height: 500px;
+}
+
 
 #section0 {
    	background-image: url(../img/kettoniket-original-bg-29.jpg);	
@@ -122,47 +171,66 @@ body.fp-viewing-0 #fp-nav{
 
 .content-intro img{
 	margin: auto;
+	max-width: 29em;
 }
 
 .content-intro h3{
 	text-align: center;
 	font-size: 2em;
 	font-weight: 100;
-	margin-top: 1em;
+	margin-top: 1.5em;
 }
 
 .content-intro a{
-	margin: auto;
-	margin-top: 2em;
-	padding: .5em 1em;
-	font-size: 1em;
-	text-transform: uppercase;
-	display: inline-block;
-	border: solid 1px #000000;	
-	border-radius: 1em;
-	background-color: transparent;
-	text-decoration: none;
-	color: #000000;
+    margin: auto;
+    margin-top: 5em;
+    padding: .5em 1em;
+    font-size: .7em;
+    text-transform: uppercase;
+    display: inline-block;
+    border: solid 1px black;
+    background-color: transparent;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: 3.2px;
+}
+
+/* section CONTENT-TOP */
+
+.content-top{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;	
 }
 
 
 /* section INFO*/
 
 .content-info{
-	margin-left: 6em;
 	margin-right: 4em;
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: column nowrap;
+    justify-content: center;	
+	height: 600px;
+	padding-left: 5em;
 }
+
+
 
 
 /* section frases */
 
 .frase{
-	width: 30%;
-	margin-top: 1em;
-	font-size: 2em;
+	width: 40%;
+	font-size: 2.5em;
 	font-weight: 700;
+	margin-bottom: 2em;
+}
+
+#frase-2{
+	width: 60%;
 }
 
 .reverse .frase{
@@ -174,10 +242,10 @@ body.fp-viewing-0 #fp-nav{
 	font-weight: 700;
 	align-self: flex-end;
 }
-
+/*
 .reverse .numero{
 	align-self: flex-start!important;
-}
+}*/
 
 .line{
 	height: .6rem;
@@ -187,6 +255,10 @@ body.fp-viewing-0 #fp-nav{
 }
 
 .reverse .line{
+	width: 100%;
+}
+
+.full{
 	width: 100%;
 }
 
@@ -201,6 +273,10 @@ body.fp-viewing-0 #fp-nav{
 	margin-left: 10em;
 }
 
+.reverse .content-info{
+	margin-left: 6em;
+}
+
 .texto-info p{
 	width: 40%;
 }
@@ -208,6 +284,179 @@ body.fp-viewing-0 #fp-nav{
 .reverse .texto-info p{
 	width: 100%!important;
 }
+
+/* section 5 */
+
+.list-producto{
+	display: flex;
+	justify-content: space-between;
+}
+
+.list-producto ul{
+	width: 12em;
+	margin-left: 5em;
+}
+
+.list-producto ul:nth-last-child(1){
+	margin-left: 3em;
+}
+
+.list-producto li{
+	border-bottom: 1px solid #000000; 
+	padding: .5em 0;
+	font-weight: 100;
+}
+
+/* CONTACTO */
+
+.contacto-info{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+.contacto-info input{
+	height: 3em;
+	width: 30em;
+	margin: 1em;
+	border: none;
+	border-bottom: solid 1px black;
+	padding-left: 1em;
+}
+
+.contacto-info textarea{
+	margin: 1em;
+	margin-top: 3em;
+	border: solid 1px black;
+	height: 10em;
+	padding: 1em;
+}
+
+.contacto-info button{
+    border: solid 1px black;
+    text-decoration: none;
+    margin: 1em;
+    align-self: flex-start;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    padding: .5em .5em;
+}
+
+.contacto-info button:hover{
+	cursor: pointer;
+}
+
+.contacto-section{
+	justify-content: center;
+}
+
+
+/* MAX-HEIGHT */
+
+@media screen and (max-width: 1280px), screen and (max-height: 721px){
+	.frase{
+		font-size: 1.3em;
+		width: 60%;
+	}
+	.numero{
+		font-size: 8em;
+	}
+	.texto-info h3 {
+	    font-size: 3em;
+	}
+	.texto-info p{
+		width: 100%;
+	}
+
+	.content-section {
+		max-width: 1000px!important;
+	}
+
+	#uno{
+		top: -7%!important;
+	}
+
+	.reverse .texto-info{
+		margin-left: 0!important;
+	}
+
+	.crop-img{
+	    height: 450px;
+	    max-width: 100%;
+	    overflow: hidden;
+	    padding: 0;
+	    position: relative;
+	    width: 90%;
+	    margin: 0 5em;
+	}
+
+	.crop-img img{
+		display: block;
+	    max-width: none!important;
+	    max-height: 450px!important;
+	}
+
+	.reverse .content-info {
+	  	margin-left: 0em;
+	}
+
+	.content-intro img{
+		max-width: 17em
+	}
+
+	.content-intro h3{
+		font-size: 1.5em;
+	}
+
+	.content-intro a{
+		margin-top: 4em;
+	}
+
+	#img-gif{
+	    height: 249px!important;
+	}
+
+	#img-gif img{
+	    display: block;
+	    max-width: none!important;
+	    max-height: 265px!important;
+	    margin-left: 2em;		
+	}
+
+
+
+	#section-6 .crop-img{
+    	margin: 0 5em 0 0;
+	}
+
+	.list-producto ul:nth-child(1){
+    	width: 10em;
+    	margin-left: 3em;
+	}		
+
+	.list-producto ul:nth-child(2){
+    	width: 7em;
+    	margin-left: 1em;
+	}	
+
+	.list-producto li {
+	    font-weight: 100;
+	    font-size: .7em;
+	}	
+
+	#section-6 .texto-info h3{
+    	margin-top: 1rem;		
+	}
+	
+
+} 
+
+@media screen and (max-height: 500px){
+	/*#menu li a{
+		font-size: 4vw;
+	}*/
+}
+
 
 /* FOTANDO */
 
@@ -218,9 +467,299 @@ body.fp-viewing-0 #fp-nav{
 
 .flotando{
 	position: absolute;
-	top: -4%;
-	right: 15%;
 	font-weight: 700;
 	font-size: 5em;
 	z-index: -1;
+}
+
+#uno{
+    top: -45px;
+	right: 15%;
+}
+
+#dos{
+	top: 50%;
+    left: -113px;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    transform: rotate(90deg);
+}
+
+#tres{
+	top: 70%;
+    right: -113px;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Safari 3-8 */
+    transform: rotate(-90deg);
+}
+
+#cuatro{
+	top: 30%;
+    left: -195px;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    transform: rotate(90deg);
+}
+
+#cinco {
+    bottom: -35px;
+    right: 15%;
+}
+
+.frase-mobile{
+	display: none;
+}
+
+.home, .contacto, .croz, #logo-mobile{
+	display: none!important;
+}
+
+
+
+@media screen and (max-width: 900px){
+	.crop-img{
+	    height: 400px;
+	    max-width: 100%;
+	    overflow: hidden;
+	    padding: 0;
+	    position: relative;
+	    width: 90%;
+	}
+
+	.crop-img img{
+		display: block;
+	    max-width: none!important;
+	    max-height: 260%!important;
+	}
+
+	#img-gif img {
+		display: block;
+	    max-width: none!important;
+	    max-height: 260%!important;
+	}	
+
+	#logo-mobile{
+	    position: fixed;    
+	    top: 20px;
+	    left: 20px;
+	    height: 3em;	
+	    z-index: 99;	
+	    display: block!important;
+	}	
+
+	#logo-mobile img{
+		border: none;
+		padding: 0;
+	}	
+
+	.content-top, .line, .flotando{
+		display: none;
+	}
+
+	.content-section{
+		flex-flow: column-reverse!important;
+	}
+
+	#menu{
+	    background-color: white;
+	    right: 0;
+	    left: auto;
+	    width: 20em;
+	    height: 100vh;
+	    top: 0;
+	    border-left: 1px gray solid;
+	}
+
+	.left{
+		right: -150vw!important;
+	}
+
+	#menu ul{
+		flex-flow: column;
+		width: 100%;
+		align-items: flex-start;
+		margin-left: 1em;
+		margin-top: 3em;
+	}
+
+	#menu a{
+		font-size: 2em;
+		font-weight: 100;
+	}
+
+	#menu li.active a{
+		font-weight: 400;
+	}		
+
+	#menu li{
+		width: 100%
+	}	
+
+
+	#menu li{
+		border-bottom: black solid 1px;
+	}
+
+	#menu li:nth-child(2){
+		border-bottom: none;
+	}	
+
+	.croz{
+		margin-left: 15em;
+		border:none;
+		background-color: white;
+	}	
+
+	.croz p{
+		font-size: 3em;
+		font-weight: 100;
+	}	
+
+	#menu li.active{
+		border-bottom: black solid 1px;
+		
+	}	
+
+	#boton-1{
+		display: none!important;	
+	}
+
+	.croz, .home, .contacto{
+		display: block!important;
+	}
+
+	.intro-logo{
+		max-width: 15em!important;
+	}
+
+	.home, .contacto{
+		display: block;
+	}
+
+	.frase-motivacional{
+		display: none;
+	}
+
+	.content-intro h3{
+		margin: 1em 1em 0 1em!important;
+	    font-size: 1.1em;
+	    font-weight: 400;		
+	}
+
+	.frase-mobile{
+		display: block;
+		width: 100%;
+		margin-bottom: .6em!important;
+	}
+
+	.content-info{
+		height: auto!important;
+	}
+	.contacto-info input{
+		width: auto;
+	}
+	.list-producto ul{
+		margin-left: 0;
+	}
+
+	.icon-mail{
+		display: none;
+	}
+
+	.reverse .content-info {
+		margin-left: auto!important;
+	}
+
+	.content-section{
+		margin-bottom: 12em;
+	}	
+
+	.reverse .crop-img{
+		align-self: flex-end;
+	}
+
+	.texto-info h3 {
+	    margin-top: 2.5rem;
+	    margin-bottom: 1.5rem;
+	}	
+ 
+	.list-producto{
+		justify-content: flex-start;
+	}
+
+	.contacto-section{
+		flex-flow: column!important;
+	}
+
+	.contacto-info{
+		margin-right: 4em;
+	    padding-left: 5em;	
+		width: 60%;	
+	}
+
+	.contacto-info input, .contacto-info textarea, .contacto-info button{
+		margin: 1em 0;
+	}		
+
+	.contacto-info textarea{
+		margin-top: 3em;
+	}
+
+	.contacto-section .texto-info h3{
+		margin-top: 1.5em;
+	}
+
+	.list-producto ul:nth-child(1){
+    	width: 12em;
+    	margin-left: 0;
+	}		
+
+	.list-producto ul:nth-child(2){
+    	width: 12em;
+	}		
+
+}
+
+@media screen and (max-width: 500px){
+	.content-info{
+		padding-left: 2em;
+	}
+
+	.content-section{
+		margin-bottom: 7em;
+	}	
+	.crop-img{
+	    height: 200px;
+	    margin-left: 0;
+	}
+
+	.contacto-info{
+	    padding-left: 2em;		
+	}	
+
+	.list-producto ul:nth-last-child(1) {
+	    margin-left: 0;
+	}
+
+	.list-producto{
+		flex-flow: column!important;
+	}
+
+	.intro-logo {
+	    max-width: 13em!important;
+	}		
+
+}
+
+
+/* VIDEO */
+
+#img-gif{
+    height: 360px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 90%;
+    margin: 0 7em;
 }

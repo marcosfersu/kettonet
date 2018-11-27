@@ -1,10 +1,11 @@
 
     $('#fullpage').fullpage({
-        anchors: ['1rdPage', '2rdPage', '3rdPage','4rdPage','5rdPage','6rdPage','7rdPage'],
+        lockAnchors: false,
+        anchors: ['inicio', 'desarrollos', 'calidad','equipo','experiencia','producto','contacto'],
         sectionsColor: ['#ffffff'],
         navigation: true,
         navigationPosition: 'right',
-        menu: '#menu',      
+        menu: '#menu',           
        afterRender: function(){
             $("#menu").addClass("none");
             $("#fp-nav").addClass("none"); 
@@ -21,32 +22,32 @@
       },  */
         onLeave: function(index, nextIndex, direction){
             if(index == 1 && direction =='down'){
-                $("#menu").removeClass("none");
+                $(".menu").removeClass("none");
                 $("#fp-nav").removeClass("none"); 
-                $("#contacto").removeClass("none");                  
+                $("#contacto").removeClass("none");   
             } 
             else if(index == 2 && direction =='up'){
-                $("#menu").addClass("none");
+                $(".menu").addClass("none");
                 $("#fp-nav").addClass("none"); 
                 $("#contacto").addClass("none");                                 
+                $(".menu").addClass("left");                                 
             }
 
             if(index == 6 && direction =='down'){
-                $("#icon-mail").attr('src','img/icon-mail-hover.svg');
-                console.log("asd");
+                $(".icon-mail img").addClass("hover-icon7");
             }
             else if(index == 7 && direction =='up'){
-                $("#icon-mail").attr('src','img/icon-mail.svg');
-                console.log("asd");
+                $(".icon-mail img").removeClass("hover-icon7");
+                $(".icon-mail img").removeClass("hover-icon");                
             }            
         },
         afterLoad: function(anchorLink, index){
             if(index == 7){
-                $("#icon-mail").attr('src','img/icon-mail-hover.svg'); 
+                $(".icon-mail img").addClass("hover-icon7");
             }
 
             if(index == 1){
-                $("#menu").addClass("none");
+                $(".menu").addClass("none");
                 $("#fp-nav").addClass("none"); 
                 $("#contacto").addClass("none");   
             }
@@ -54,38 +55,54 @@
         responsiveWidth: 900,
         afterResponsive: function(isResponsive){
 
+        },
+        responsiveHeight: 600,
+        afterResponsive: function(isResponsive){
         }
-
-
     });
 $(document).ready(function(){
     $("#boton-1").click(function(){
-            $("#menu").addClass("none");
+            $(".menu").addClass("none");
              $("#fp-nav").addClass("none"); 
                 $("#contacto").addClass("none");              
     });
- $("#icon-mail").hover(function(){
-        var hovericon = 1;
 
-        if(hovericon = 1){
-            $("#icon-mail").attr('src','img/icon-mail-hover.svg');
-        }
-
-    });  
-
-
- /*
-    $("#icon-mail").hover(function(){
+/*    $("#icon-mail").hover(function(){
          var src = ($(this).attr('src') === 'img/icon-mail.svg')
             ? 'img/icon-mail-hover.svg'
             : 'img/icon-mail.svg';
          $(this).attr('src', src);
     });
 
-   
+    $("#icon-mail").hover(function(){
+        $("#icon-mail").attr('src','img/icon-mail-hover.svg');
+    });    
 
     $("#icon-mail").click(function(){
         $("#icon-mail").attr('src','img/icon-mail-hover.svg');
+    });*/
+
+    $(".axe").click(function(){
+        $(".menu").toggleClass("left");
     });
-*/
+
+
+    $(".menu-ul > li").click(function(){
+        $(".menu").addClass("left");
+    });  
+
+    $(".icon-mail").hover(function(){
+        $(".icon-mail img").toggleClass("hover-icon");     
+        console.log(2);        
+    });
+
+    $(".icon-mail").click(function(){
+        $(".icon-mail img").addClass("hover-icon7");     
+        console.log(1);
+    });    
+       
+    // document.getElementById("img-gif").controls = false;
+
+
 });    
+
