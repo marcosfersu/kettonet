@@ -176,13 +176,17 @@
 					<div class="texto-info">
 						<h3>contacto</h3>
 						<h5>+54 11 4755 2743</h5>
+						<h5 class="contacto-dire">Maria Asunta 3860 - San Martin ( CP 1650 )</br>
+							Buenos Aires - Argentina</h5>
 					</div>
 				</article>
 				<div class="contacto-info">
-				<input type="text" name="nombre" placeholder="nombre">
-				<input type="text" name="mail" placeholder="mail">	
-				<textarea type="text"></textarea>
-				<button>enviar</button>
+					<FORM ACTION="enviar_email.php" METHOD="post"> 
+						<input type="text" name="first_name" placeholder="nombre"></input>
+						<input type="email" name="email" placeholder="mail"></input>	
+						<textarea type="text" rows=5 cols=30 name="message"></textarea>
+						<INPUT type="submit" value="Enviar"><a href="http://www.internetedadinero.com/tutorial-formulario/email_form.php"></a>
+					</FORM>
 				</div>			
 			</section>			
 		</div>				

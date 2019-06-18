@@ -309,7 +309,7 @@ body.fp-viewing-0 #fp-nav{
 
 /* CONTACTO */
 
-.contacto-info{
+.contacto-info FORM{
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -332,14 +332,16 @@ body.fp-viewing-0 #fp-nav{
 	padding: 1em;
 }
 
-.contacto-info button{
+.contacto-info input[type=submit]{
     border: solid 1px black;
     text-decoration: none;
     margin: 1em;
     align-self: flex-start;
     background-color: #ffffff;
     text-transform: uppercase;
-    padding: .5em .5em;
+	padding: .5em .5em;
+	width: auto!important;
+	cursor: pointer;
 }
 
 .contacto-info button:hover{
@@ -350,6 +352,9 @@ body.fp-viewing-0 #fp-nav{
 	justify-content: center;
 }
 
+.content-info .contacto-dire{
+	margin-top: 1em;
+}
 
 /* MAX-HEIGHT */
 
