@@ -182,10 +182,10 @@
 				</article>				
 			</form>
 				<div class="contacto-info">
-					<form action="form.php" method="POST">
-						<input type="text" name="nombre" placeholder="Nombre y apellido" required>
-						<input type="email" name="email" placeholder="Email" required>	
-						<textarea name="comentarios" required></textarea>
+					<form id="frmContacto" action="javascript:sendContacto()" method="POST">
+						<input type="text" id="nombre" name="nombre" placeholder="Nombre y apellido" required>
+						<input type="email" id="email" name="email" placeholder="Email" required>	
+						<textarea id="comentarios" name="comentarios" required></textarea>
 						<input type="submit" value="Enviar">
 					</form>
 				</div>			
@@ -197,6 +197,25 @@
 	<script type="text/javascript" src="js/menu.js"></script>
 
 	<script>
+	function sendContacto(){
+		if(!$("#frmContacto").hasClass('enviando')){
+			$("#frmContacto").addClass('enviando');
+			$.post("form.php",{ nombre: $('#nombre').val(), 
+								email: $('#email').val(),
+								comentarios: $('#comentarios').val(),
+								rand:Math.random() } ,function(data){
+			
+				alert(data);
+				
+				$("#frmContacto").removeClass('enviando');
+				$('#frmContacto')[0].reset();  
+				console.log(data);
+
+			});	
+		}else{
+			console.log('form enviando...');
+		}
+	}
 
 	</script>
 </body>
