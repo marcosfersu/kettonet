@@ -3,9 +3,9 @@ if(isset($_POST['email'])) {
  
     // Edita las líneas siguientes con tu dirección de correo y asunto
  
-    $email_to = "tucorreo@tucorreo.com";
+    $email_to = "kartarok@gmail.com.com";
  
-    $email_subject = "Tu Asunto de correo";   
+    $email_subject = "Contacto web Ketonnet";   
  
     function died($error) {
  

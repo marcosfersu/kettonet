@@ -309,7 +309,7 @@ body.fp-viewing-0 #fp-nav{
 
 /* CONTACTO */
 
-.contacto-info FORM{
+.contacto-info form{
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;

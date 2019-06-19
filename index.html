@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">	
-
+	<link rel="icon" type="image/png" href="./img/favicon.png" />
 	
 
 
@@ -179,14 +179,15 @@
 						<h5 class="contacto-dire">Maria Asunta 3860 - San Martin ( CP 1650 )</br>
 							Buenos Aires - Argentina</h5>
 					</div>
-				</article>
+				</article>				
+			</form>
 				<div class="contacto-info">
-					<FORM ACTION="enviar_email.php" METHOD="post"> 
-						<input type="text" name="first_name" placeholder="nombre"></input>
-						<input type="email" name="email" placeholder="mail"></input>	
-						<textarea type="text" rows=5 cols=30 name="message"></textarea>
-						<INPUT type="submit" value="Enviar"><a href="http://www.internetedadinero.com/tutorial-formulario/email_form.php"></a>
-					</FORM>
+					<form action="form.php" method="POST">
+						<input type="text" name="nombre" placeholder="Nombre y apellido" required>
+						<input type="email" name="email" placeholder="Email" required>	
+						<textarea name="comentarios" required></textarea>
+						<input type="submit" value="Enviar">
+					</form>
 				</div>			
 			</section>			
 		</div>				
