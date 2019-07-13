@@ -195,28 +195,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/frameworks/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
-
-	<script>
-	function sendContacto(){
-		if(!$("#frmContacto").hasClass('enviando')){
-			$("#frmContacto").addClass('enviando');
-			$.post("form.php",{ nombre: $('#nombre').val(), 
-								email: $('#email').val(),
-								comentarios: $('#comentarios').val(),
-								rand:Math.random() } ,function(data){
-			
-				alert(data);
-				
-				$("#frmContacto").removeClass('enviando');
-				$('#frmContacto')[0].reset();  
-				console.log(data);
-
-			});	
-		}else{
-			console.log('form enviando...');
-		}
-	}
-
-	</script>
+	<script type="text/javascript" src="js/form.js"></script>
 </body>
 </html>

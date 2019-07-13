@@ -9,7 +9,7 @@
 		}
 
 		// Seteo datos del correo
-		$para = "kartarok@gmail.com";
+		$para = "Ventas@kettonet.com.ar";
 		$asunto = "Nueva consulta desde la Web";
 		$cuerpo = "Se ha recibido el siguiente formulario: " . $cuerpo;
 
